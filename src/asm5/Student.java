@@ -59,14 +59,6 @@ public class Student {
         this.gpa = gpa;
     }
 
-    @Override
-    public String toString() {
-        return "Student{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", dateOfBirth='" + dateOfBirth + '\'' +
-                ", address='" + address + '\'' +
-                ", gpa=" + gpa +
-                '}';
-    }
+
+
 }

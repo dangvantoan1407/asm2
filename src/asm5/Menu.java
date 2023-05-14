@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Menu {
     public static void main(String[] args) {
         StudentManagement st = new StudentManagement();
+        Student student = new Student();
         int luaChon = 0;
         do {
             System.out.println("--------------");
@@ -20,14 +21,15 @@ public class Menu {
             Scanner sc = new Scanner(System.in);
             luaChon = sc.nextInt(); sc.nextLine();
             switch (luaChon) {
-                case 1:st.add();
-                    System.out.println(st.toString());
+                case 1:st.add(student);
+                    System.out.println(st);
+
                 break;
                 case 2:
                     System.out.println("Nhập id cần sửa ");
                     int id = sc.nextInt(); sc.nextLine();
                     st.edit(id);
-                    System.out.println(st.toString());
+                    System.out.println(st);
                     break;
                 case 3:
                     System.out.println("Nhập id sinh viên cần xóa");
@@ -36,11 +38,11 @@ public class Menu {
                     break;
                 case 4:
                     st.sortgpa();
-                    System.out.println(st.toString());
+                    System.out.println(st);
                     break;
                 case 5:
                     st.sortname();
-                    System.out.println(st.toString());
+                    System.out.println(st);
                     break;
                 case 6:
                     st.show();

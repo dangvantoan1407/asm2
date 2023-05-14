@@ -14,7 +14,7 @@ public class StudentManagement  {
 
 
 
-    public void add() {
+    public void add(Student student) {
         System.out.println("Nhâp id ");
         int id = sc.nextInt();
         System.out.println("Nhập tên ");
@@ -24,9 +24,8 @@ public class StudentManagement  {
         System.out.println("Nhập địa chỉ ");
         String address = sc.nextLine();
         System.out.println("Nhập điểm gpa ");
-        Float gpa = sc.nextFloat();
+        float gpa = sc.nextFloat();
         students.add(new Student());
-
     }
 
     public void edit(int id) {
@@ -46,7 +45,6 @@ public class StudentManagement  {
                 Float gpa = sc.nextFloat();
                 i.setGpa(gpa);
                 System.out.println("Thêm sinh viên thành công");
-                System.out.println(toString());
                 return ;
             }
         }
@@ -56,9 +54,9 @@ public class StudentManagement  {
       }
       public void delete(int id) {
         for (Student i : students) {
-            if(i.getId() == id) {
+            if(i.getId() != id) {
                 students.remove(i);
-                System.out.println("xóa sv thàng công ");
+                System.out.println("xóa sv thành công ");
                 return;
             }
         }
@@ -87,7 +85,12 @@ public class StudentManagement  {
         }
       }
 
-
+    @Override
+    public String toString() {
+        return "StudentManagement{" +
+                "students=" + students +
+                '}';
+    }
 }
 
 
