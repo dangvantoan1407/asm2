@@ -76,11 +76,17 @@ public class News implements INews {
     }
     public void calculate() {
         double total = 0;
-        for ((Integer i : rateList){
+        for (Integer i : rateList){
             total+=i;
         }
         AverageRate = total/rateList.size();
     }
-    public void inputRate(int star)
+    public void inputRate(int star) {
+        if(star >= 1 && star <=5){
+            rateList.add(star);
+            calculate();
+            return;
+        }
+    }
 
 }

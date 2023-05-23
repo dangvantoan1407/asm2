@@ -3,23 +3,21 @@ package asm1;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Cart {
     private int id;
     String customer;
     private double grandTotal;
-    private ArrayList<Product> productList;
+    private String productList;
     String city;
+    Scanner sc = new Scanner(System.in);
 
     public Cart() {
 
     }
 
-    public void aRR(){
-        String[] myArray = new String[10];
-    }
-
-
+    ArrayList<Cart> list = new ArrayList<>();
 
     public int getId() {
         return id;
@@ -45,11 +43,11 @@ public class Cart {
         this.grandTotal = grandTotal;
     }
 
-    public ArrayList<Product> getProductList() {
+    public String getProductList() {
         return productList;
     }
 
-    public void setProductList(ArrayList<Product> productList) {
+    public void setProductList(String productList) {
         this.productList = productList;
     }
 
@@ -61,12 +59,29 @@ public class Cart {
         this.city = city;
     }
 
-    public void addProduct(Product product) {
-        this.productList.add(product);
+    public Scanner getSc() {
+        return sc;
     }
-    public void removeProduct(Product product) {
-        this.productList.remove(product);
+
+    public void setSc(Scanner sc) {
+        this.sc = sc;
     }
+
+    public ArrayList<Cart> getList() {
+        return list;
+    }
+
+    public void setList(ArrayList<Cart> list) {
+        this.list = list;
+    }
+
+    public int aDD(){
+        System.out.println("Nhập tên sách cần thêm ");
+        productList = sc.nextLine();
+
+         return 0;
+    }
+
 
     public void tongTien(){
         double ship = 0;

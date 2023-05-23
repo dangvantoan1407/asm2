@@ -1,10 +1,11 @@
 package asm2;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Room {
     String name, position, listPerson;
-
+    ArrayList<Person> person;
 
     public Room(){
     }
@@ -26,13 +27,14 @@ public class Room {
         this.position = position;
     }
 
-    public String getListPerson() {
-        return listPerson;
+    public ArrayList<Person> getPerson() {
+        return person;
     }
 
-    public void setListPerson(String listPerson) {
-        this.listPerson = listPerson;
+    public void setPerson(ArrayList<Person> person) {
+        this.person = person;
     }
+
 
 
     public void Adder(){
