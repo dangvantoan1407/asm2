@@ -30,7 +30,6 @@ public class Book {
     public double getPrice() {
         return price;
     }
-
     public String toString() {
         return title + "\nAuthor " + author.toString() + "\nPrice: " + price;
     }
